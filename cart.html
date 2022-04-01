@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #container{
+            display:flex;
+            text-align:center;
+            width:90%;
+            margin:auto;
+            padding:2%;
+            height:300px;
+            margin-top:2%;
+
+        }
+        img{
+            height:30%;
+            margin:auto;
+        }
+
+        p{
+            text-align:center;
+            font-size:12px;
+
+        }
+        #container>div{
+            margin-right:10%;
+            height:100%;
+        }
+        body>p{
+            font-size: 21px;
+            margin-top:10%;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight:bold;
+        }
+
+        body>button{
+            height:34px;
+            width:21%;
+            margin-top:10%;
+            font-size:16px;
+            background-color:aqua;
+            border:0px;
+            margin-left:40%;
+        }
+
+        a{
+            text-decoration:none;
+        }
+    </style>
+</head>
+<body>
+    <p></p>
+    <div id="container"></div>
+    <button><a href="payment.html">payment</a></button>
+</body>
+</html>
+
+<script>
+
+    var cartData = JSON.parse(localStorage.getItem("cart"))
+    console.log(cartData);
+
+    
+    var total = cartData.reduce(function(sum, elem, index, arr)
+    {
+        return sum + Number(elem.price)
+    }, 0)
+
+    var length = cartData.length;
+
+    console.log(total)
+
+    document.querySelector("p").innerText = ` items in your cart ${length} total amount is ${total}`
+
+    cartData.map(function(elem, index)
+    {
+        var box = document.createElement("div")
+        box.setAttribute = ("class", "innerBox");
+        
+        var img = document.createElement("img")
+        img.src = elem.image_url
+
+        var name = document.createElement("p")
+        name.innerText = elem.name
+
+        var price = document.createElement("p")
+        price.innerText = elem.price
+
+        var strickedoffprice = document.createElement("p")
+        strickedoffprice.innerText = elem.strickedoffprice
+
+
+        var btn = document.createElement("button")
+        btn.innerText = "Remove"
+        btn.addEventListener("click", function()
+        {
+            removeItem(elem, index)
+        })
+
+        box.append(img, name, price, strickedoffprice, btn)
+
+
+        document.querySelector("#container").append(box);
+
+    });
+
+    function removeItem(elem, index)
+    {
+        console.log(elem, index)
+        cartData.splice(index, 1)
+        localStorage.setItem("cart", JSON.stringify(cartData))
+        window.location.reload()
+    }
+</script>

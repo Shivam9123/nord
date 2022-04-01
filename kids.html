@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .left-side-menu {
+            margin-left: 90px;
+            margin-top: 120px;
+            position: absolute;
+            width:3%;
+            background-color: white;
+            font-size:16px;
+            display:grid;
+            gap:27px;
+
+        }
+
+        .left-side-menu>select{
+            border: 0px;
+            font-size:16px;
+        }
+
+        select {
+        -webkit-appearance:none;
+      }
+
+      #container
+
+      {
+          display:grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(6, );
+          gap : 2px;
+          margin-left:20%;
+          width:70%;
+          margin-top:3%;
+          
+      }
+
+      @media all and (min-width: 81px) and ( max-width: 201px)
+      {
+        #container
+
+            {
+                grid-template-columns: repeat(1, 1fr);
+            }
+      }
+
+      #defence
+      {
+          display:flex;
+      }
+      
+      
+        #outerMost
+        {
+           height : 100px;
+           width : 90%;
+           margin:auto;
+        }
+
+        #navbar 
+        {
+            height: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            margin-top:3%;   
+        }
+      
+        #find
+        {
+            height:42px;
+            width:42px;
+            font-size:12px;
+
+        }
+
+        #nord 
+        {
+            height: 25px;
+            width: 160px;
+            margin-left: 3%;
+        }
+
+        #search 
+        {
+            height: 34px;
+            width: 730px;  
+            font-size:16px;
+            padding:2px;
+        }
+
+        #signIn
+        {
+            height: 34px;
+            width:120px;
+            text-align : center;
+            font-size:12px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-right:7%;
+        }
+        #signIn>option
+        {
+            font-size:12px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        #cart 
+            {
+                height: 34px;
+                width: 54px;
+                font-size:12px;
+            }
+
+        #signCart
+            {
+                margin-right:2%;
+                display:flex;
+            }
+            #list > ul 
+            {
+                display:flex;
+                gap: 6%;
+                font-size:16px;
+                margin:auto;
+                width:100%;
+                justify-content:center;
+                border: 0px;
+                list-style:none;
+            }
+        a{
+            text-decoration:none;
+         }
+         img{
+          height:200px;
+          margin:auto;
+      }
+
+      #shop
+        {
+            width:27%;
+            margin:auto;
+            text-align:center;
+            font-size:16px;
+        }
+
+        #shop>button
+        {
+            font-size:12px;
+            padding:10px;
+            width:70%;
+        }
+
+        #menu
+            {
+            height:430px;
+            width:97%;
+            display:flex;
+            margin:auto;
+            margin-top:10%;
+
+            }
+        
+        .tab
+        {
+            width:20%;
+            justify-content: space-around;
+            font-size:16px;
+            margin-left:2%;
+            margin-top:1%;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .tab>p , a {
+            padding:1%;
+            margin-left:3%;
+            font-size:12px;
+            color:black;
+            text-decoration: none;
+
+        }
+
+     
+
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <div id = "outerMost">
+        <div id = "navbar">
+           <a href="index.html"><img id= "nord" src =" https://hautephotovideo.com/wp-content/uploads/2021/02/Nordstrom.png"/></a> 
+            <div>
+                <button id="find" type="submit"><i class="fa fa-search"></i></button>
+                <input id="search" placeholder="search here">
+            </div>
+            <div id="signCart">
+               <select id="signIn">
+                <option>SIGN IN</option>
+                <option>Purchase</option>
+                <option>Wish List</option>
+                <option>The Nordy</option>
+                <option>Club Rewards</option>
+                <option>Shipping Addresses</option>
+                <option>Payment Methods</option>
+                <option>Looks</option>
+                <option></option>
+                <option></option>
+             </select>
+            <button id ="cart"><a target="_blank" href="cart.html">CART</a></button>
+        </div>
+    </div>
+        <div id="dropdown">
+             <div id="list">
+                 <ul>
+                    <li><a href="sale.html">sale</a></li>
+                    <li> <a href="women.html">women</a></li>
+                    <li> <a href="men.html">men</a></li>
+                    <li> <a href="kids.html">kids</a></li>
+                    <li><a href="young adult.html">young adult</a></li>
+                    <li><a href="">active wear</a></li>
+                    <li> <a href="">home</a></li>
+                    <li> <a href="">beauty</a></li>
+                    <li> <a href="">designer</a></li>
+                    <li> <a href="">gift</a></li>
+                 </ul>
+             </div>
+         </div>
+            <div id="shop">
+                <h2>Shop what you love—faster and easier.</h2>
+                <button><a href ="signIn.html">sign In or create account</a></button>
+            </div>
+    <div id="defence">
+        <div class="left-side-menu">
+         <select>
+            <option>gender</option>
+            <option>men</option>
+            <option>unisex</option>
+            <option>women</option>
+         </select>
+         <select>
+            <option >product type</option>
+            </select>
+            <select>
+                <option>size</option>
+            </select>
+            <select>
+                <option>color</option>
+            </select>
+            <select>
+                <option>brand</option>
+            </select>
+            <select>
+                <option>featured</option>
+            </select>
+            <select>
+                <option>fit</option>
+            </select>
+            <select>
+                <option>material</option>
+            </select>
+            <select>
+                <option>neck style</option>
+            </select>
+            <select>
+                <option>price</option>
+            </select>
+            <select>
+                <option>sale</option>
+            </select>
+            <select>
+                <option>sleeve length</option>
+            </select>
+            <select>
+                <option>sports league</option>
+            </select>
+            <select>
+                <option>sports team</option>
+            </select>
+            <select>
+                <option>style</option>
+            </select>   
+        </div>
+    
+      <div id="container"></div>
+    </div>
+
+    <div>
+        <div>
+            <div id="menu">
+                <div class="tab">customer service
+                    <p>contact Us</p>
+                    <p>order Status</p>
+                    <p>ShippinG</p>
+                    <p>return Policy Exchange</p>
+                    <p>price Adjustment</p>
+                    <p>gift Card</p>
+                    <p>FAQ</p>
+                </div>
+                <div class="tab">about us
+                    <p>career</p>
+                    <p>corporate Responsibility</p>
+                    <p>diversity, inclusion & belonginG</p>
+                    <p>get Email Update</p>
+                    <p>nordStorm blog</p>
+                    <p>nordy Podcast</p>
+                </div>
+                <div class="tab">stores & services
+                    <p>find A store</p>
+                    <p>free Style Help</p>
+                    <p>alteraions & tailor</p>
+                    <p>trunk Club</p>
+                    <p>pop-In-shop</p>
+                    <p>virtual Events</p>
+                    <p>spa Nordstorm</p>
+                    <p>nordstorm Restorants</p>
+                    <p>nordStorm Local</p>
+                </div>
+                <div class="tab">card & rewards
+                    <p>the Nordy Club Reward</p>
+                    <p>pay My bill</p>
+                    <p>manage My nordStorm card</p>
+                </div>
+            </div>
+
+            <div id="icon">
+                <i class="fa-thin fa-alicorn"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+    var mensData = [
+        {
+            image_url : " https://n.nordstrommedia.com/id/sr3/933a269d-9add-4b2f-bbe1-4d4413960ec5.jpeg?h=365&w=240&dpr=2",
+            name : "Torrey Performance Shorts",
+            price: 1000,
+            strickedoffprice : 2000 ,
+        },
+        {
+            image_url : " https://n.nordstrommedia.com/id/sr3/97444139-5cbf-4c29-bf30-c984c331d3b7.jpeg?h=365&w=240&dpr=2",
+            name : " Strato Slim Fit Crewneck Tech T-Shirt",
+            price: 1000,
+            strickedoffprice : 2000 ,
+        },
+        {
+            image_url : " https://n.nordstrommedia.com/id/sr3/b13a6ff4-ca0b-4140-98ce-c24a5e473e84.jpeg?h=365&w=240&dpr=2",
+            name : " Sunday Performance Jogger Sweatpants",
+            price: 1000,
+            strickedoffprice : 2000 ,
+        },
+        {
+            image_url : " https://n.nordstrommedia.com/id/sr3/d1e1cfa9-7cb6-450d-99ef-1f6389000acf.jpeg?h=365&w=240&dpr=2",
+            name : " TED BAKER LONDON Swansea Vertical Stripe Merino Wool Polo Sweater",
+            price: 1000,
+            strickedoffprice : 2000 ,
+        },
+        {
+            image_url : " https://n.nordstrommedia.com/id/sr3/7aad8533-9ead-4a88-b620-1f92ef689120.jpeg?h=365&w=240&dpr=2",
+            name : " Kore Shorts",
+            price: 1000,
+            strickedoffprice : 2000 ,
+        },
+        {
+            image_url : " https://n.nordstrommedia.com/id/sr3/a18ec7c9-6a67-4f16-abaf-976f480c23ff.jpeg?h=365&w=240&dpr=2",
+            name : "Mogami Slingback Sandal (Walker, Toddler & Little Kid)",
+            price: 1000,
+            strickedoffprice : 2000 ,
+        },
+        {
+            image_url : " https://n.nordstrommedia.com/id/sr3/73b321e0-5371-427d-890d-aff8294dc5de.jpeg?h=365&w=240&dpr=2",
+            name : " Allover Logo Cotton & Cashmere Skirted Bodysuit (Baby)",
+            price: 1000,
+            strickedoffprice : 2000 ,
+        },
+        {
+            image_url : " https://n.nordstrommedia.com/id/sr3/c4d1f1c8-ceab-4a96-a9ed-bd74e977e64f.jpeg?h=365&w=240&dpr=2",
+            name : " Allover Logo Cotton & Cashmere Skirted Bodysuit (Baby)",
+            price: 1000,
+            strickedoffprice : 2000 ,
+        },
+        {
+            image_url : " https://n.nordstrommedia.com/id/sr3/12245182-0cbc-49e4-8798-9875e16c0e46.jpeg?h=365&w=240&dpr=2",
+            name : " Allover Logo Cotton & Cashmere Skirted Bodysuit (Baby)",
+            price: 1000,
+            strickedoffprice : 2000 ,
+        },
+        {
+            image_url : " https://n.nordstrommedia.com/id/sr3/8e234b69-c34a-4cb1-8357-e9fb93dc4b84.jpeg?h=365&w=240&dpr=2",
+            name : " Allover Logo Cotton & Cashmere Skirted Bodysuit (Baby)",
+            price: 1000,
+            strickedoffprice : 2000 ,
+        },
+        {
+            image_url : " https://n.nordstrommedia.com/id/sr3/5e444201-e844-463b-a16d-6352e1db63ae.jpeg?h=365&w=240&dpr=2",
+            name : " Allover Logo Cotton & Cashmere Skirted Bodysuit (Baby)",
+            price: 1000,
+            strickedoffprice : 2000 ,
+        },
+        {
+            image_url : " https://n.nordstrommedia.com/id/sr3/9d36d3d5-5bc5-49b8-a335-55ed02ff02c6.jpeg?h=365&w=240&dpr=2",
+            name : "Mogami Slingback Sandal (Walker, Toddler & Little Kid)",
+            price: 1000,
+            strickedoffprice : 2000 ,
+        },
+        {
+            image_url : " https://n.nordstrommedia.com/id/sr3/8e234b69-c34a-4cb1-8357-e9fb93dc4b84.jpeg?h=365&w=240&dpr=2",
+            name : " Kids' Ruffle Print Dress (Little Girl & Big Girl)",
+            price: 1000,
+            strickedoffprice : 2000 ,
+        },
+        {
+            image_url : " https://n.nordstrommedia.com/id/sr3/73b321e0-5371-427d-890d-aff8294dc5de.jpeg?h=365&w=240&dpr=2",
+            name : " Kids' Ruffle Print Dress (Little Girl & Big Girl)",
+            price: 1000,
+            strickedoffprice : 2000 ,
+        },
+        {
+            image_url : " https://n.nordstrommedia.com/id/sr3/97444139-5cbf-4c29-bf30-c984c331d3b7.jpeg?h=365&w=240&dpr=2",
+            name : " Allover Logo Cotton & Cashmere Skirted Bodysuit (Baby)",
+            price: 1000,
+            strickedoffprice : 2000 ,
+        },
+        {
+            image_url : " https://n.nordstrommedia.com/id/sr3/9d36d3d5-5bc5-49b8-a335-55ed02ff02c6.jpeg?h=365&w=240&dpr=2",
+            name : "Mogami Slingback Sandal (Walker, Toddler & Little Kid)",
+            price: 1000,
+            strickedoffprice : 2000 ,
+        },
+        
+    ]
+
+
+    var cartData = JSON.parse(localStorage.getItem("cart")) || []
+    mensData.map(function(elem)
+    {
+        var box = document.createElement("div")
+        box.setAttribute = ("class", "innerBox");
+        
+        var img = document.createElement("img")
+        img.src = elem.image_url
+
+        var name = document.createElement("p")
+        name.innerText = elem.name
+
+        var price = document.createElement("p")
+        price.innerText = elem.price
+
+        var strickedoffprice = document.createElement("p")
+        strickedoffprice.innerText = elem.strickedoffprice
+
+
+        var btn = document.createElement("button")
+        btn.innerText = "Add to cart"
+        btn.addEventListener("click", function()
+        {
+            addToCart(elem)
+        });
+
+        box.append(img, name, price, strickedoffprice, btn)
+
+
+        document.querySelector("#container").append(box);
+
+    });
+
+    function addToCart(elem)
+    {
+        console.log(elem);
+        cartData.push(elem);
+
+        localStorage.setItem("cart", JSON.stringify(cartData))
+    }
+</script>

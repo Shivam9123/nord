@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .loginform
+        {
+            width:27%;
+            margin:auto;
+            margin-top:12%;
+            text-align:center;
+        }
+
+        .box>form>input{
+            width:70%;
+            height:34px;
+            margin-bottom: 10%;
+        }
+
+        h6{
+            font-size:20px;
+            margin-bottom:1%;
+        }
+
+        button
+        {
+            width:70%;
+            height:43px;
+            font-size:12px;
+            text-transform:uppercase;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin:auto;
+            background-color:black;
+            color:white;
+            border:0px;
+            padding:10px;
+            margin-top: 3%;
+        }
+
+        h1
+        {
+            text-transform:uppercase;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+        }
+
+        a{
+            text-decoration:none;
+            color:white;
+         }
+
+         #menu
+            {
+            height:430px;
+            width:97%;
+            display:flex;
+            margin:auto;
+            margin-top:10%;
+
+            }
+        
+        .tab
+        {
+            width:20%;
+            justify-content: space-around;
+            font-size:16px;
+            margin-left:2%;
+            margin-top:1%;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .tab>p , a {
+            padding:1%;
+            margin-left:3%;
+            font-size:12px;
+            color:black;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+        <div id="header">
+            
+                
+            <div class="loginform">
+                <div class="box">
+                    <h1>SIGN IN | create account</h1>
+                    <p>select your E-mail Id to get started</p>
+                    <form>
+                        
+                        <input id="email" type="text" placeholder="Email"/>
+
+                        <input id="password" type="password" placeholder="password"/>
+
+                        
+                        <input type="submit"/>
+                        
+                    </form>  
+                    <button><a href="signup.html">signup</a></button>
+                </div>
+            </div>
+    
+        </div>
+
+        <div>
+            <div>
+                <div id="menu">
+                    <div class="tab">customer service
+                        <p>contact Us</p>
+                        <p>order Status</p>
+                        <p>ShippinG</p>
+                        <p>return Policy Exchange</p>
+                        <p>price Adjustment</p>
+                        <p>gift Card</p>
+                        <p>FAQ</p>
+                    </div>
+                    <div class="tab">about us
+                        <p>career</p>
+                        <p>corporate Responsibility</p>
+                        <p>diversity, inclusion & belonginG</p>
+                        <p>get Email Update</p>
+                        <p>nordStorm blog</p>
+                        <p>nordy Podcast</p>
+                    </div>
+                    <div class="tab">stores & services
+                        <p>find A store</p>
+                        <p>free Style Help</p>
+                        <p>alteraions & tailor</p>
+                        <p>trunk Club</p>
+                        <p>pop-In-shop</p>
+                        <p>virtual Events</p>
+                        <p>spa Nordstorm</p>
+                        <p>nordstorm Restorants</p>
+                        <p>nordStorm Local</p>
+                    </div>
+                    <div class="tab">card & rewards
+                        <p>the Nordy Club Reward</p>
+                        <p>pay My bill</p>
+                        <p>manage My nordStorm card</p>
+                    </div>
+                </div>
+    
+                <div id="icon">
+                    <i class="fa-thin fa-alicorn"></i>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
+
+<script>
+
+    document.querySelector("form"),addEventListener("submit", loginFun);
+
+    var regArr = JSON.parse(localStorage.getItem("userCredit"));
+
+    function loginFun()
+    {
+        event.preventDefault();
+
+        var inputEmail = document.querySelector("#email").value;
+        var inputPass = document.querySelector("#password").value;
+       
+
+        for( var i = 0; i < regArr.length; i++)
+        {
+            if(regArr[i].email == inputEmail && regArr[i].password == inputPass)
+            {
+                alert("succesfull")
+                window.location.href = "index.html";
+                break;
+            }
+            else{
+                alert("create account first");
+                
+                window.location.href = "signup.html";
+            }
+        }
+    }
+</script>

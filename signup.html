@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .signup
+        {
+            width:30%;
+            margin:auto;
+            margin-top:10%;
+        }
+        h2{
+            font-size:27px;
+        }
+
+        label{
+            font-size:16px;
+            font-weight:lighter;
+            margin-bottom: 2%;
+            
+        }
+        input{
+            height:21px;
+            width:70%;
+        }
+
+        button
+        {
+            width:70%;
+            height:43px;
+            font-size:12px;
+            text-transform:uppercase;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin:auto;
+            background-color:black;
+            border:0px;
+            padding:10px;
+            margin-top: 3%;
+            color:aqua;
+        }
+
+        form{
+            display:flex;
+            flex-direction : column;
+        }
+
+        a{
+            color:aqua;
+            text-decoration:none;
+        }
+
+        #menu
+            {
+            height:430px;
+            width:97%;
+            display:flex;
+            margin:auto;
+            margin-top:10%;
+
+            }
+        
+        .tab
+        {
+            width:20%;
+            justify-content: space-around;
+            font-size:16px;
+            margin-left:2%;
+            margin-top:1%;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .tab>p , a {
+            padding:1%;
+            margin-left:3%;
+            font-size:12px;
+            color:black;
+            text-decoration: none;
+
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="signup">
+      <div>
+        <h2>create account</h2>
+        <p>check out faster</p>
+        <p>use one sign-in Acces our brands</p>
+    </div>
+    
+        <form>
+            <label>Email</label>
+            <input id="email" type="email" placeholder="Email"/>
+
+            <label>first name</label>
+            <input id="fName" type="name" placeholder="first name"/>
+
+            <label>last name</label>
+            <input id="lName" type="name" placeholder="last name"/>
+
+            <label>password</label>
+            <input id="password" type="password" placeholder="password"/>
+
+            <label>By creating an account, you agree to our Privacy Policy and Terms & Conditions.</label>
+
+            <input type="submit"/>
+
+        </form>
+        <button><a href="index.html">front page</a></button>
+
+        <div>
+            <div>
+                <div id="menu">
+                    <div class="tab">customer service
+                        <p>contact Us</p>
+                        <p>order Status</p>
+                        <p>ShippinG</p>
+                        <p>return Policy Exchange</p>
+                        <p>price Adjustment</p>
+                        <p>gift Card</p>
+                        <p>FAQ</p>
+                    </div>
+                    <div class="tab">about us
+                        <p>career</p>
+                        <p>corporate Responsibility</p>
+                        <p>diversity, inclusion & belonginG</p>
+                        <p>get Email Update</p>
+                        <p>nordStorm blog</p>
+                        <p>nordy Podcast</p>
+                    </div>
+                    <div class="tab">stores & services
+                        <p>find A store</p>
+                        <p>free Style Help</p>
+                        <p>alteraions & tailor</p>
+                        <p>trunk Club</p>
+                        <p>pop-In-shop</p>
+                        <p>virtual Events</p>
+                        <p>spa Nordstorm</p>
+                        <p>nordstorm Restorants</p>
+                        <p>nordStorm Local</p>
+                    </div>
+                    <div class="tab">card & rewards
+                        <p>the Nordy Club Reward</p>
+                        <p>pay My bill</p>
+                        <p>manage My nordStorm card</p>
+                    </div>
+                </div>
+    
+                <div id="icon">
+                    <i class="fa-thin fa-alicorn"></i>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
+
+<script>
+
+document.querySelector("form").addEventListener("submit", signUpFun);
+
+var userArr = JSON.parse(localStorage.getItem("userCredit")) || [];
+
+
+function signUpFun()
+{
+    event.preventDefault();
+    console.log("inside")
+    var userObj = {
+        email: document.querySelector("#email").value,
+        fname: document.querySelector("#fName").value,
+        lname: document.querySelector("#lName").value,
+        password: document.querySelector("#password").value,  
+    };
+    
+          userArr.push(userObj);
+
+    localStorage.setItem("userCredit", JSON.stringify(userArr))
+    console.log(userArr);
+}
+
+
+
+</script>

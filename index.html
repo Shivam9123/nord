@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+    
+        body{ 
+        width:100%;
+        }
+
+        #outerMost
+        {
+           height : 100px;
+           width : 90%;
+           margin:auto;
+        }
+
+        #navbar 
+        {
+            height: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            margin-top:3%;   
+        }
+
+        #nord 
+        {
+            height: 25px;
+            width: 160px;
+            margin-left: 3%;
+        }
+
+        #search 
+        {
+            height: 34px;
+            width: 730px;  
+            font-size:16px;
+            padding:2px;
+        }
+
+        #signIn
+        {
+            height: 34px;
+            width:120px;
+            text-align : center;
+            font-size:12px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-right:7%;
+        }
+        #signIn>option
+        {
+            font-size:12px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        #cart 
+            {
+                height: 34px;
+                width: 54px;
+                font-size:12px;
+            }
+
+        #signCart
+            {
+                margin-right:2%;
+                display:flex;
+            }
+            #list > ul 
+            {
+                display:flex;
+                gap: 6%;
+                font-size:16px;
+                margin:auto;
+                width:100%;
+                justify-content:center;
+                border: 0px;
+                list-style:none;
+            }
+        a{
+            text-decoration:none;
+         }
+
+        #list
+        {
+         width:98%;
+         margin:auto;
+         
+        }
+
+        #menu
+            {
+            height:430px;
+            width:97%;
+            display:flex;
+            margin:auto;
+            margin-top:10%;
+
+            }
+        
+        .tab
+        {
+            width:20%;
+            justify-content: space-around;
+            font-size:16px;
+            margin-left:2%;
+            margin-top:1%;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .tab>p{
+            padding:1%;
+            margin-left:3%;
+            font-size:12px;
+            font-family: sans
+        }
+
+        #credit
+        {
+            background : url("https://n.nordstrommedia.com/id/44648fdb-be56-4600-addb-6d3c7ba21f2c.jpeg?h=200&w=1608") no-repeat;
+            height:210px;
+            width:90%;
+            margin:auto;
+        }
+        
+        #credit>div{
+            width:30%;
+            margin:auto;
+            padding:34px;
+            font-size:16px;
+
+        }
+
+       .line
+        {
+        height:1px;
+        width:90%;
+        margin:auto;
+        border: 1px solid maroon;
+        margin-top:1%;
+        background-color:maroon;
+        } 
+        .sunshine
+        {
+        margin:auto;
+        display:flex;
+        margin-top:2%;
+        width:90%;
+        }
+
+        .sunshine>div{
+            width:70%;
+        }
+
+        .vacation>h2{
+            font-size:34px;
+            font-family:Arial, Helvetica, sans-serif
+        }
+        .vacation>p{
+            font-size:16px;
+        }
+
+        .vacation
+        {
+            height:60%;
+            width:30%;
+            margin:auto;
+        }
+
+        .beautyCycle
+        {
+            background:url("https://n.nordstrommedia.com/id/e286ffa9-9ade-43d0-b765-abefdc777eee.jpeg?h=400&w=1608") no-repeat;
+            height:421px;
+            margin:auto;
+            margin-top:1%;
+            width:97%;
+        }
+
+        .three
+        {
+            width:90%;
+            margin:auto;
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows:repeat(1, 430px);
+            text-align:left;
+            gap:10px;
+
+        }
+        .text
+        {
+            
+            justify-content:center;
+            align-items:center;
+            margin:auto;
+            padding-left:6%;
+        }
+
+        .text>img{
+            width:90%;
+            height:75%;
+            margin-left: 3%;
+        }
+
+        #find
+        {
+            height:42px;
+            width:42px;
+            font-size:12px;
+
+        }
+        
+        .nordypod
+        {
+            height:201px;
+            width:90%;
+            margin:auto;
+            margin-top:10%;
+            display:flex;
+        }
+
+        .spring
+        {
+            height:390px;
+            width:90%;
+            
+            margin:auto;
+            background: url("https://n.nordstrommedia.com/id/8e3ed0ba-313a-40c2-b12a-fb53a50a387a.jpeg?h=400&w=1608") no-repeat;
+            text-align:left;
+        }
+
+        .book
+        {
+            width:39%;
+            margin-left:2px;
+            padding-top:9%;
+        }
+
+        .catagory
+        {
+            width:90%;
+            display:grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(1, 210px);
+            margin:auto;
+            margin-top:16%;
+            gap:10px;
+        }
+
+        .slide
+        {
+            width:90%;
+            display:grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows:repeat(1, 210px);
+            gap:10px;
+            margin:auto;
+            margin-top: 16%;
+        }
+
+        
+
+        .slide>div>img{
+            height:100%;
+        }
+
+        div.slide {
+       background-color: #ffff;
+       overflow: auto;
+       white-space: nowrap;
+       height:430px;
+       width:90%;
+        }
+
+        div.slide a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px;
+        text-decoration: none;
+        height:430px;
+        width:90%;
+        }
+
+        div.slide a:hover {
+        background-color:#ffff;
+        }
+
+        .slide>div
+        {
+        height:390px;
+        margin:auto;
+        }
+
+        #shop
+        {
+            width:27%;
+            margin:auto;
+            text-align:center;
+            font-size:16px;
+        }
+
+        #shop>button
+        {
+            font-size:12px;
+            padding:10px;
+            width:70%;
+        }
+
+        #icon
+        {
+            display:flex;
+            margin:auto;
+        }
+     
+    </style>
+
+</head>
+<body>
+    <!-- header -->
+    <div id = "outerMost">
+        <div id = "navbar">
+           <a href="index.html"><img id= "nord" src =" https://hautephotovideo.com/wp-content/uploads/2021/02/Nordstrom.png"/></a> 
+            <div>
+                <button id="find" type="submit"><i class="fa fa-search"></i></button>
+                <input id="search" placeholder="search here">
+            </div>
+            <div id="signCart">
+               <select id="signIn">
+                <option>SIGN IN</option>
+                <option>Purchase</option>
+                <option>Wish List</option>
+                <option>The Nordy</option>
+                <option>Club Rewards</option>
+                <option>Shipping Addresses</option>
+                <option>Payment Methods</option>
+                <option>Looks</option>
+                <option></option>
+                <option></option>
+             </select>
+            <button id ="cart"><a target="_blank" href="cart.html">CART</a></button>
+        </div>
+    </div>
+    
+        <div id="dropdown">
+             <div id="list">
+                 <ul>
+                    <li><a href="sale.html">sale</a></li>
+                    <li> <a href="women.html">women</a></li>
+                    <li> <a href="men.html">men</a></li>
+                    <li> <a href="kids.html">kids</a></li>
+                    <li><a href="young adult.html">young adult</a></li>
+                    <li><a href="women.html">active wear</a></li>
+                    <li> <a href="index.html">home</a></li>
+                    <li> <a href="kids.html">beauty</a></li>
+                    <li> <a href="sale.html">designer</a></li>
+                    <li> <a href="men.html">gift</a></li>
+                 </ul>
+             </div>
+         </div>
+            <div id="shop">
+                <h2>Shop what you love—faster and easier.</h2>
+                <button><a href ="signIn.html">sign In or create account</a></button>
+            </div>
+         <!-- 1st div -->
+        <div class="line"></div>
+         <div id="credit">
+             <div>
+                 <h2>Get a $43 bonnus note !</h2>
+                 <p>an exclusive offer for New Nordstorm credit members. restrictions apply.</p>
+                 <h6><a href="cart.html">apply now</a> </h6>
+             </div>
+         </div>
+         
+         <div class="sunshine"> 
+             <div>
+                 <img src=" https://n.nordstrommedia.com/id/4fb295e9-6c35-4634-9a63-9fa48af15124.jpeg?h=700&w=1608"/>
+
+             </div>
+             <div class="vacation">
+                 <h2>Introducing Etam</h2>
+                 <p> Discover lingerie you'll love to wear from our newest French favorite.</p>
+                 <p> <a href="women.html">Etam</a></p>
+                 <p><a href="women.html">All Lingerie</a></p>
+             </div>
+         </div>
+         <div class="line"></div>
+         <div class="beautyCycle"></div>
+
+         
+
+         <div class="three">
+             <div class="text">
+                 <img src="https://n.nordstrommedia.com/id/dcb78424-1119-4948-8ce2-6e4de5dd7d5f.jpeg?h=512&w=536"/>
+                 <h2>Effortlessly Cool</h2>
+                 <p>Stock up on festival-ready styles and more from We the Free by Free People.</p>
+                 <p>Free People</p>
+             </div>
+
+             <div class="text">
+                 <img src="https://n.nordstrommedia.com/id/5f53ce9b-d441-4e91-803b-beb7abd85e68.jpeg?h=512&w=536"/>
+                 <h2>Modern Refresh: Weekend Edition</h2>
+                 <p>Ready for a menswear upgrade? Start with casual favorites from FRAME and more.</p>
+                 <p>Advanced Modern</p>
+             </div>
+             <div class="text">
+                 <img src="https://n.nordstrommedia.com/id/0ac668d3-e676-4ac1-8b1e-993f1f89be2d.jpeg?h=512&w=536"/>
+                 <h2> Style Stories with Kate</h2>
+                 <p>Join Nordstrom Fashion Editor Kate Bellman every other Friday for tips on curating the season's best styles from the brands you love. Plus, you can shop her picks during the events! </p>
+                 <p> RSVP Now</p>
+             </div>
+         </div>
+
+
+         <!-- nordyPod -->
+         
+         <div class="nordypod">
+             <img src="https://n.nordstrommedia.com/id/d42cbfbc-165c-4e70-bf9f-a1c02528bc6a.jpeg?h=200&w=938"/>
+             <img src=" "/>
+         </div>
+
+         <!-- free style help -->
+         <div class="spring">
+             <div class="vacation book">
+                 <h2>free style help</h2>
+                 <p> from spring weddings to special ocasions- we'll help you to be the best-dressed guest with looks to match your lifestyle, size and budget</p>
+                 <p> learn more</p>
+                 <p>book a free apointment</p>
+             </div>
+             <div>
+                 <img src="https://n.nordstrommedia.com/id/199745ce-b775-482a-aa3b-8b49e8bf0ff2.gif?h=200&w=1608"/>
+             </div>
+         </div>
+         
+         <!-- shop by catagory -->
+
+         <div class="catagory">
+             
+             <div class="innerTab">
+                 <img src="https://n.nordstrommedia.com/id/bcf8f4f3-1f56-446a-a5c6-45b51e348801.jpeg?h=365&w=268"/>
+                 <h3>woman</h3>
+             </div>
+             <div class="innertab">
+                 <img src="https://n.nordstrommedia.com/id/90631b6f-f991-4e8c-bdac-a5133520450a.jpeg?h=365&w=268"/>
+                 <h3>men</h3>
+             </div>
+             <div class="innertab">
+                 <img src="https://n.nordstrommedia.com/id/4fe1c4fc-f81b-4ccf-a661-2c0b5fef6dc7.jpeg?h=365&w=268"/>
+                 <h3>kids</h3>
+             </div>
+             <div class="innertab">
+                 <img src="https://n.nordstrommedia.com/id/e4a1a210-0e30-4960-98df-1aee973a2a8f.jpeg?h=365&w=268"/>
+                 <h3>home</h3>
+             </div>
+             <div class="innertab">
+                 <img src="https://n.nordstrommedia.com/id/c72df99d-147e-45a5-838f-55cfd0e72fd2.jpeg?h=365&w=268"/>
+                 <h3>beauty & frangrance</h3>
+             </div>
+             <div class="innertab">
+                 <img src="https://n.nordstrommedia.com/id/b329b17c-e3b9-47c9-adfe-975592541179.jpeg?h=365&w=268"/>
+                 <h3>designer</h3>
+             </div>
+         </div>
+
+
+         <!-- currently loving -->
+
+         <div class="slide">
+             <div>
+                 <img src="https://images.dashhudson.com/aHR0cHM6Ly9jZG4uZGFzaGh1ZHNvbi5jb20vbWVkaWEvZnVsbC8xNjQ0NTA2NTY1LjEwNTYxNzg3NDc5OC5qcGVn.jpg?w=640&h=640&fit=cover"/>
+             </div>
+             <div>
+                 <img src="https://images.dashhudson.com/aHR0cHM6Ly9jZG4uZGFzaGh1ZHNvbi5jb20vbWVkaWEvZnVsbC8xNjQ0NTM3OTQ1LjQ1MTQ5MjQ0NTgyLmpwZWc=.jpg?w=640&h=640&fit=cover"/>
+             </div>
+             <div>
+                 <img src="https://images.dashhudson.com/aHR0cHM6Ly9jZG4uZGFzaGh1ZHNvbi5jb20vbWVkaWEvZnVsbC8xNjQ0NDI0NDg2Ljg4NDU0NDQ4NDQwMC5qcGVn.jpg?w=640&h=640&fit=cover"/>
+             </div>
+             <div>
+                 <img src="https://images.dashhudson.com/aHR0cHM6Ly9jZG4uZGFzaGh1ZHNvbi5jb20vbWVkaWEvZnVsbC8xNjQ0NjA1MDY4LjE1NTE4NDc4OTY2MS5qcGVn.jpg?w=640&h=640&fit=cover"/>
+             </div>
+             <div>
+                 <img src="https://images.dashhudson.com/aHR0cHM6Ly9jZG4uZGFzaGh1ZHNvbi5jb20vbWVkaWEvZnVsbC8xNjQzNzQwOTAxLjQxNjMzNDQyMzE3My5qcGVn.jpg?w=640&h=640&fit=cover"/>
+             </div>
+             <div>
+                 <img src="https://images.dashhudson.com/aHR0cHM6Ly9jZG4uZGFzaGh1ZHNvbi5jb20vbWVkaWEvZnVsbC8xNjQzMDQ2MDUxLjU2NTM4MTU5ODA3MS5qcGVn.jpg?w=640&h=640&fit=cover"/>
+             </div>
+             <div>
+                 <img src="https://images.dashhudson.com/aHR0cHM6Ly9jZG4uZGFzaGh1ZHNvbi5jb20vbWVkaWEvZnVsbC8xNjQyNzM5NjkzLjQyOTA5NzQyMjM5MS5qcGVn.jpg?w=640&h=640&fit=cover"/>
+             </div>
+             <div>
+                 <img src="https://images.dashhudson.com/aHR0cHM6Ly9jZG4uZGFzaGh1ZHNvbi5jb20vbWVkaWEvZnVsbC8xNjQzMTI5MzIxLjEyOTMxMzcyNTE0OS5qcGVn.jpg?w=640&h=640&fit=cover"/>
+             </div>
+             <div>
+                 <img src="https://images.dashhudson.com/aHR0cHM6Ly9jZG4uZGFzaGh1ZHNvbi5jb20vbWVkaWEvZnVsbC8xNjQyNzI3Mjg5Ljc5MzY1Njg4NjgwOS5qcGVn.jpg?w=640&h=640&fit=cover"/>
+             </div>
+             <div>
+                 <img src="https://images.dashhudson.com/aHR0cHM6Ly9jZG4uZGFzaGh1ZHNvbi5jb20vbWVkaWEvZnVsbC8xNjQyODA2Mjc5LjQ0OTk4MTI3NjQ4Mi5qcGVn.jpg?w=640&h=640&fit=cover"/>
+             </div>
+         </div>
+
+         <!-- footer -->
+
+         <div>
+            <div>
+                <div id="menu">
+                    <div class="tab">customer service
+                        <p>contact Us</p>
+                        <p>order Status</p>
+                        <p>ShippinG</p>
+                        <p>return Policy Exchange</p>
+                        <p>price Adjustment</p>
+                        <p>gift Card</p>
+                        <p>FAQ</p>
+                    </div>
+                    <div class="tab">about us
+                        <p>career</p>
+                        <p>corporate Responsibility</p>
+                        <p>diversity, inclusion & belonginG</p>
+                        <p>get Email Update</p>
+                        <p>nordStorm blog</p>
+                        <p>nordy Podcast</p>
+                    </div>
+                    <div class="tab">stores & services
+                        <p>find A store</p>
+                        <p>free Style Help</p>
+                        <p>alteraions & tailor</p>
+                        <p>trunk Club</p>
+                        <p>pop-In-shop</p>
+                        <p>virtual Events</p>
+                        <p>spa Nordstorm</p>
+                        <p>nordstorm Restorants</p>
+                        <p>nordStorm Local</p>
+                    </div>
+                    <div class="tab">card & rewards
+                        <p>the Nordy Club Reward</p>
+                        <p>pay My bill</p>
+                        <p>manage My nordStorm card</p>
+                    </div>
+                </div>
+    
+                <div id="icon">
+                    <i class="fa-thin fa-alicorn"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
